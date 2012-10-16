@@ -1,0 +1,113 @@
+
+body {
+   background-image: url('Nintendo_DS_Lite_Console.png');
+   background-repeat: no-repeat;
+}
+
+#topScreen {
+   position: absolute;
+   left: 182px;
+   top: 53px;
+   background-color: white;
+   width: 312px;
+   height: 211px;
+   padding-top: 20px;
+}
+
+#backgroundTable {
+   display: table;
+   width: 312px;
+   height: 211px;
+}
+
+.backgroundTableRow {
+   display: table-row;
+}
+
+.backgroundTableCell {
+   display: table-cell;
+   border-bottom: 1px solid #A9A9A9;
+   border-right: 1px solid #A9A9A9;
+}
+
+#clock {
+   height: 300px;
+   width: 300px;
+   margin-top: -195px;
+   margin-right: 70px;
+}
+
+#calendar {
+   display: table;
+   border: 2px solid black;
+   float: right;
+   width: 75px;
+   height: 85px;
+   margin-top: -195px;
+   margin-right: 16px;
+}
+
+.row {
+   display: table-row;
+   
+}
+
+#daysOfWeek {
+   font-size: 73%;
+   color: white;
+   background-color: gray;
+}
+
+#sun {
+   background-color: red;
+}
+
+#sat {
+   background-color: blue;
+}
+
+.weekDay {
+   display: table-cell;
+   border-right: 2px solid black;
+   border-bottom: 2px solid black;
+   /*width: 22px;*/
+   height: 19px;
+   text-align: center;
+   padding: 1px;
+   
+}
+
+.day {
+   display: table-cell;
+   background-color: white;
+   border-right: 2px solid #A9A9A9;
+   border-bottom: 2px solid #A9A9A9;
+   padding: 0px;
+   height: 19px;
+}
+
+.firstDay {
+   background-color: #F19BF1;
+}
+
+.lastDay {
+   background-color: #7094DB;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
