@@ -212,9 +212,20 @@
          </div>
       </div>
       <div id = "topBar">
+         <p>Lisa</p>
+         <div id = "digitalClock">
+            <ul id="digital-clock" class="digital">
+               <li class="hour"></li>
+               <li class="min"></li>
+            </ul>
+         </div>
+         <div id = "date" class = "top"></div>
+         <div id = "icon1" class = "top"></div>
+         <div id = "icon2" class = "top"></div>
+         <div id = "battery" class = "top"></div>
+         
       </div>
 	  <div id = "clock">
-	     
          <ul id="analog-clock" class="analog">
             <li class="hour"></li>
             <li class="min"></li>
@@ -289,6 +300,9 @@
     <script src="jquery-clock-plugin/js/jquery.clock.js"></script>  
     <script>
 	    $('#analog-clock').clock({offset: '+5', type: 'analog'});
+	    $('#digital-clock').clock({offset: '+5', type: 'digital'});
+	     var today = new Date();
+         $("#date").append((today.getMonth() + 1)+"/"+today.getDate());
 	</script>
   </body>
 

@@ -28,7 +28,11 @@
       }
       else
       {
-        jQuery(_this).find(".sec").html(seconds);
+        if (seconds < 10) {
+           jQuery(_this).find(".sec").html("0"+seconds);
+        } else {
+           jQuery(_this).find(".sec").html(seconds);
+        }
       }
     }, 1000 );
 
@@ -59,7 +63,11 @@
       }
       else
       {
-        jQuery(_this).find(".min").html(mins+':');
+        if (mins < 10) {
+           jQuery(_this).find(".min").html("0"+mins);
+        } else {
+           jQuery(_this).find(".min").html(mins);
+        }
       }
     }, 1000 );
   }
