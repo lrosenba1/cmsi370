@@ -77,17 +77,25 @@ var Boxes = {
                 top: event.pageY - this.deltaY
             });
         } else if (this.resizingBox) {
+            // JD: This code is embedded one level too deep.
                 console.log("in resizingbox area LTcorner="+this.LTcorner);
                 if (this.LTcorner) {
+                    // JD: And *this* code, relative to the line above it, should be
+                    //     indented one level deeper.  (although ultimately it does
+                    //     not have to move; just shift the lines above it to the left.
                 console.log("in resizingbox area if check");
                 console.log("originX="+this.originX+", pageX="+event.pageX);
                 console.log("originY="+this.originY+", pageY="+event.pageY);
                 console.log("this.width="+this.width+", this.height="+this.height);
-              
+
+                    // JD: Hmmmm, OK, there is simply a lot of indentation fixing to
+                    //     do here.  I'll stop talking about it now.
                     var newOffset = { left: event.pageX, top: event.pageY };
                     this.resizingBox
                         .offset(newOffset)
-                        .width(  (this.originX - event.pageX )+this.width )
+                        // JD: These statements are spaced quite irregularly.  I did
+                        //     the line below to serve as a good example.
+                        .width((this.originX - event.pageX) + this.width)
                         .height( (this.originY - event.pageY )+this.height );
                 }
                 if (this.LBcorner) {
