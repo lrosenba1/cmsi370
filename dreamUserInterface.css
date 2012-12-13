@@ -16,3 +16,18 @@ h1 {
   left: 650px;
   top: 530px;
 }
+
+ul {
+   text-align: center;
+}
+
+li {
+   display: inline;
+   background-color: SlateBlue;
+   padding: 10px;
+   border: 4px outset gray;
+}
+
+li a {
+   color: DarkRed;
+}

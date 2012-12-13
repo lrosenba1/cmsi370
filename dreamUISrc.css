@@ -1,0 +1,17 @@
+
+body {
+   background-color: lightyellow;
+} 
+
+h1 {
+   text-align: center;
+}
+
+div {
+   border: 4px groove gray;
+   width: 550px;
+   height: 270px;
+   margin-left: 200px;
+   padding: 10px;
+   background-color: LightBlue;
+}
