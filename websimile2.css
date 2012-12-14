@@ -1,12 +1,63 @@
 body {
 }
 
+#container {
+   width: 600px;
+   height: 600px;
+}
+
 #topBar {
+   background: -moz-linear-gradient(top, rgb(224,224,224) 0%, rgb(127,127,127) 100%); /* FF3.6+ */
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(224,224,224)), color-stop(100%,rgb(127,127,127))); /* Chrome,Safari4+ */
+   background: -webkit-linear-gradient(top, rgb(224,224,224) 0%,rgb(127,127,127) 100%); /* Chrome10+,Safari5.1+ */
+}
+
+#title {
+   margin-bottom: -25px;
+   margin-left: 250px;
+}
+
+#exit {
+   margin-bottom: 35px;
+   margin-top: 10px;
+   margin-left: 10px;
+   width: 15px;
+   height: 15px;
+   border: 1px inset gray;
+   border-radius: 100%;
+   background: -moz-radial-gradient(center, ellipse cover, rgba(255,0,4,1) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+   background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,0,4,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+   background: -webkit-radial-gradient(center, ellipse cover, rgba(255,0,4,1) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+}
+
+#minimize {
+   margin-bottom: 35px;
+   margin-top: 10px;
+   width: 15px;
+   height: 15px;
+   border: 1px inset gray;
+   border-radius: 100%;
+   background: -moz-linear-gradient(top, rgb(255,140,0) 0%, rgb(255,215,0) 70%); /* FF3.6+ */
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(255,140,0)), color-stop(70%,rgb(255,215,0))); /* Chrome,Safari4+ */
+   background: -webkit-linear-gradient(top, rgb(255,140,0) 0%,rgb(255,215,0) 70%); /* Chrome10+,Safari5.1+ */
+}
+
+#gray {
+   margin-bottom: 35px;
+   margin-top: 10px;
+   width: 15px;
+   height: 15px;
+   border: 1px inset gray;
+   border-radius: 100%;
+   background: -moz-linear-gradient(top, rgb(245,246,246) 0%, rgb(219,220,226) 21%, rgb(184,186,198) 49%, rgb(221,223,227) 80%, rgb(245,246,246) 100%); /* FF3.6+ */
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(245,246,246)), color-stop(21%,rgb(219,220,226)), color-stop(49%,rgb(184,186,198)), color-stop(80%,rgb(221,223,227)), color-stop(100%,rgb(245,246,246))); /* Chrome,Safari4+ */
+   background: -webkit-linear-gradient(top, rgb(245,246,246) 0%,rgb(219,220,226) 21%,rgb(184,186,198) 49%,rgb(221,223,227) 80%,rgb(245,246,246) 100%); /* Chrome10+,Safari5.1+ */
 }
 
 #leftArrow {
    padding: 7px;
    margin-right: 0px;
+   margin-left: -58px;
    width: 35px;
    height: 30px;
    border: 1px solid #A5A5A5;
@@ -31,15 +82,186 @@ body {
    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 15%,rgba(211,211,211,1) 100%); /* Chrome10+,Safari5.1+ */
 }
 
-#exit {
-   width: 15px;
-   height: 15px;
-   border: 1px inset gray;
-   border-radius: 100%;
-   background: -moz-radial-gradient(center, ellipse cover, rgba(255,0,4,1) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
-background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,0,4,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
-background: -webkit-radial-gradient(center, ellipse cover, rgba(255,0,4,1) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+#showAll {
+   margin-left: 10px;
+   position: absolute;
+   top: 30px;
+   width: 85px;
+   height: 31px;
+   font-size: 13px;
+   border: 1px solid gray;
+   border-radius: 8%;
+   background: -moz-linear-gradient(top, rgb(255,255,255) 0%, rgb(241,241,241) 50%, rgb(225,225,225) 51%, rgb(226,226,226) 100%); /* FF3.6+ */
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(255,255,255)), color-stop(50%,rgb(241,241,241)), color-stop(51%,rgb(225,225,225)), color-stop(100%,rgb(226,226,226))); /* Chrome,Safari4+ */
+   background: -webkit-linear-gradient(top, rgb(255,255,255) 0%,rgb(241,241,241) 50%,rgb(225,225,225) 51%,rgb(226,226,226) 100%); /* Chrome10+,Safari5.1+ */
 }
+
+#search {
+   position: absolute;
+   left: 470px;
+   top: 30px;
+   border-top-right-radius: 10px;
+   border-bottom-right-radius: 10px;
+   border-top-left-radius: 10px;
+   border-bottom-left-radius: 10px;
+}
+
+#color {
+   padding-top: 20px;
+   padding-left: 150px;
+   border-bottom: 1px solid gray;
+   background-color: #DCDCDC;
+}
+
+.description {
+   font-size: 10px;
+   margin-top: 0px;
+}
+
+#radioButtons {
+   padding-top: 13px;
+   padding-left: 150px;
+   padding-bottom: 100px;
+   border-bottom: 1px solid gray;
+   background-color: #DCDCDC;
+}
+
+#scroll {
+   margin-top: -20px;
+}
+
+#topBottom {
+   position: absolute;
+   top: 210px;
+   left: 285px;
+   margin-bottom: 15px;
+}
+
+#tLabel {
+   position: absolute;
+   top: 210px;
+   left: 307px;
+   margin-bottom: 15px;
+}
+
+#text {
+   margin-top: -20px;
+   margin-left: -30px;
+}
+
+#next {
+   position: absolute;
+   top: 242px;
+   left: 285px;
+}
+
+#nextLabel {
+   position: absolute;
+   top: 242px;
+   left: 310px;
+}
+
+#jump {
+   position: absolute;
+   top: 265px;
+   left: 285px;
+   margin-bottom: 15px;
+}
+
+#jLabel {   
+   position: absolute;
+   top: 265px;
+   left: 310px;
+   margin-bottom: 15px;
+}
+
+#check {
+   position: absolute;
+   top: 295px;
+   left: 285px;
+}
+
+#checkLabel {
+   position: absolute;
+   top: 295px;
+   left: 310px;
+}
+
+#check1 {
+   position: absolute;
+   top: 325px;
+   left: 285px;
+}
+
+#check1Label {
+   position: absolute;
+   top: 325px;
+   left: 310px;
+}
+
+#number {
+   padding-top: 13px;
+   padding-left: 150px;
+   padding-bottom: 65px;
+   border-bottom: 1px solid gray;
+   background-color: #DCDCDC;
+}
+
+#recent {
+   margin-left: -30px;
+}
+
+#apps {
+   position: absolute;
+   top: 371px;
+   left: 285px;
+}
+
+#appsLabel {
+   position: absolute;
+   top: 371px;
+   left: 355px;
+}
+
+#docs {
+   position: absolute;
+   top: 396px;
+   left: 285px;
+}
+
+#docLabel {
+   position: absolute;
+   top: 396px;
+   left: 355px;
+}
+
+#servers {
+   position: absolute;
+   top: 421px;
+   left: 285px;
+}
+
+#servLabel {
+   position: absolute;
+   top: 421px;
+   left: 355px;
+}
+
+#font {
+   padding-top: 13px;
+   padding-left: 150px;
+   padding-bottom: 65px;
+   border-bottom: 1px solid gray;
+   background-color: #DCDCDC;
+}
+
+#help {
+    position: absolute;
+    top: 497px;
+    left: 535px;
+}
+
+
 
 
 

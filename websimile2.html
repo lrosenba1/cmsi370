@@ -8,32 +8,94 @@
     </head>
     
     <body>
-        <div id = "topBar">
-            <button id = "leftArrow"><img src = "Triangle-Left.png" alt = "Triangle-Left" width="16" height="16"></button>
-            <button id = "rightArrow"><img src = "triangle_gray_right.png" alt = "triangle_gray_right" width="13" height="13"></button>
-            <button id = "exit"></button>
-            <button id = "minimize"></button>
-            <button id = "gray"></button>
+        <div id = "container">
+           <div id = "topBar">
+               <div id = "title">Appearance</div>
+               <button id = "exit"></button>
+               <button id = "minimize"></button>
+               <button id = "gray"></button>
+               <button id = "leftArrow"><img src = "Triangle-Left.png" alt = "Triangle-Left" width="16" height="16"></button>
+               <button id = "rightArrow"><img src = "triangle_gray_right.png" alt = "triangle_gray_right" width="13" height="13"></button>
+               <button id = "showAll">Show All</button>
+               <input type = "text" id = "search">
+           </div>
+           <div id = "color">
+               <label for = "colorValue">Appearance: </label>
+                <select class = "select" name = "colorValue">
+                    <option value="Blue"><img src = "blue.png" alt="blue" width="30" height="20"> Blue</option>
+                    <option value="Graphite"><img src = "graphite.png" alt="graphite"> Graphite</option>
+                </select>
+                <p class = "description">For the overall look of buttons, menus, and windows</p>
+                <label for = "highlight">Highlight color: </label>
+                <select class = "select" name = "highlight">
+                    <option value="Graphite"><img src = "lightgraphite.png" alt="lightgraphite"> Graphite</option>
+                    <option value="Silver"><img src = "silver.png" alt="silver"> Silver</option>
+                    <option value="Blue"><img src = "lightblue.png" alt="lightblue"> Blue</option>
+                    <option value="Gold"><img src = "gold.png" alt="gold"> Gold</option>
+                    <option value="Red"><img src = "red.png" alt="red"> Red</option>
+                    <option value="Orange"><img src = "orange.png" alt="orange"> Orange</option>
+                    <option value="Green"><img src = "green.png" alt="green"> Green</option>
+                    <option value="Purple"><img src = "purple.png" alt="purple"> Purple</option>
+                    <option value="Other"><img src = "other.png" alt="other"> Other</option>
+                </select>
+                <p class = "description">For selected text</p>
+           </div>
+           <div id = "radioButtons">
+                Place scroll arrows: <input type = "radio" id = "scroll" name = "scroll" value = "Together"><label for = "scroll"> Together</label>
+                <input type = "radio" id = "topBottom" name = "topBottom" value = "At top and bottom"><label for = "topBottom" id = "tLabel"> At top and bottom</label>
+                <div id = "text"><br /><br /><br />Click in the scroll bar to: </div> <input type = "radio" id = "next" name = "next" value = "jump to next page"><label for = "next" id = "nextLabel"> Jump to the next page</label>
+                <input type = "radio" id = "jump" name = "jump"><label for = "jump" id = "jLabel"> jump to the spot that's clicked</label>
+                <input type = "checkbox" name = "check" value = "smooth scrolling" id = "check"> <label for = "check" id = "checkLabel"> Use smooth scrolling</label>
+                <input type = "checkbox" name = "check1" value = "double click" id = "check1"> <label for = "check1" id = "check1Label"> Double-click a window's title bar to minimize</label>
+           </div>
+           <div id = "number">
+                 <div id = "recent">Number of recent items: </div>
+                 <select class = "select" name = "apps" id = "apps">
+                    <option value="None">None</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                    <option value="50">50</option>
+                 </select>
+                 <label for = "apps" id = "appsLabel">Applications</label>
+                 <select class = "select" name = "documents" id = "docs">
+                    <option value="None">None</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                    <option value="50">50</option>
+                 </select>
+                 <label for = "documents" id = "docLabel">Documents</label>
+                 <select class = "select" name = "servers" id = "servers">
+                    <option value="None">None</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                    <option value="50">50</option>
+                 </select>
+                 <label for = "servers" id = "servLabel">Servers</label>
+           </div>
+           <div id = "font">
+                 <input type = "checkbox" name = "LCD" value = "LCD font" id = "LCD"> <label for = "LCD" id = "LCDLabel"> Use LCD font smoothing when available</label>
+                 <br /><br />Turn off text smoothing for font sizes 
+                 <select class = "select" name = "sizes" id = "sizes">
+                    <option value="4">4</option>
+                    <option value="6">6</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="12">12</option>
+                 </select> 
+                 and smaller
+                 <img src = "help.png" id = "help">
+           </div>
         </div>
-        <div id = "color">
-            <label for = "colorValue">Appearance: </label>
-            <select name = "colorValue">
-                <option value="Blue"><img src = "blue.png" alt="blue" width="30" height="20"> Blue</option>
-                <option value="Graphite"><img src = "graphite.png" alt="graphite"> Graphite</option>
-            </select>
-            <label for = "highlight">Highlight color: </label>
-            <select name = "highlight">
-                <option value="Graphite"><img src = "lightgraphite.png" alt="lightgraphite"> Graphite</option>
-                <option value="Silver"><img src = "silver.png" alt="silver"> Silver</option>
-                <option value="Blue"><img src = "lightblue.png" alt="lightblue"> Blue</option>
-                <option value="Gold"><img src = "gold.png" alt="gold"> Gold</option>
-                <option value="Red"><img src = "red.png" alt="red"> Red</option>
-                <option value="Orange"><img src = "orange.png" alt="orange"> Orange</option>
-                <option value="Green"><img src = "green.png" alt="green"> Green</option>
-                <option value="Purple"><img src = "purple.png" alt="purple"> Purple</option>
-                <option value="Other"><img src = "other.png" alt="other"> Other</option>
-            </select>
-       </div>
     
     </body>
     
