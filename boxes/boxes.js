@@ -57,7 +57,7 @@ var Boxes = {
     trackDrag: function (event) {
         // Don't bother if we aren't tracking anything.
         if (this.drawingBox) {
-            console.log("in drawingBox area");
+            
             // Calculate the new box location and dimensions.  Note how
             // this might require a "corner switch."
             var newOffset = {
@@ -71,22 +71,19 @@ var Boxes = {
                 .height(Math.abs(event.pageY - this.anchorY));
         } else if (this.movingBox) {
             // Reposition the object.
-            console.log("in movingBox area");
+            
             this.movingBox.offset({
                 left: event.pageX - this.deltaX,
                 top: event.pageY - this.deltaY
             });
         } else if (this.resizingBox) {
             // JD: This code is embedded one level too deep.
-                console.log("in resizingbox area LTcorner="+this.LTcorner);
+               
                 if (this.LTcorner) {
                     // JD: And *this* code, relative to the line above it, should be
                     //     indented one level deeper.  (although ultimately it does
                     //     not have to move; just shift the lines above it to the left.
-                console.log("in resizingbox area if check");
-                console.log("originX="+this.originX+", pageX="+event.pageX);
-                console.log("originY="+this.originY+", pageY="+event.pageY);
-                console.log("this.width="+this.width+", this.height="+this.height);
+                
 
                     // JD: Hmmmm, OK, there is simply a lot of indentation fixing to
                     //     do here.  I'll stop talking about it now.
@@ -99,10 +96,7 @@ var Boxes = {
                         .height( (this.originY - event.pageY )+this.height );
                 }
                 if (this.LBcorner) {
-                console.log("in resizingbox area if check");
-                console.log("originX="+this.originX+", pageX="+event.pageX);
-                console.log("originY="+this.originY+", pageY="+event.pageY);
-                console.log("this.width="+this.width+", this.height="+this.height);
+               
               
                     var newOffset = { left: event.pageX, top: this.originY };
                     this.resizingBox
@@ -112,10 +106,7 @@ var Boxes = {
                         .height( event.pageY-this.originY);
                 }
                 if (this.RTcorner) {
-                console.log("in resizingbox area if check");
-                console.log("originX="+this.originX+", pageX="+event.pageX);
-                console.log("originY="+this.originY+", pageY="+event.pageY);
-                console.log("this.width="+this.width+", this.height="+this.height);
+               
               
                     var newOffset = { left: this.originX, top: event.pageY };
                     this.resizingBox
@@ -125,10 +116,7 @@ var Boxes = {
                         .height( (this.originY - event.pageY) +this.height);
                 }
                 if (this.RBcorner) {
-                console.log("in resizingbox area if check");
-                console.log("originX="+this.originX+", pageX="+event.pageX);
-                console.log("originY="+this.originY+", pageY="+event.pageY);
-                console.log("this.width="+this.width+", this.height="+this.height);
+               
               
                     var newOffset = { left: this.originX, top: this.originY };
                     this.resizingBox
@@ -157,9 +145,13 @@ var Boxes = {
             // All done.
             this.drawingBox = null;
         } else if (this.movingBox) {
-            // Change state to "not-moving-anything" by clearing out
-            // this.movingBox.
-            this.movingBox = null;
+            console.log(this.movingBox.width());
+            if ((event.pageX - this.deltaX) <= 514 - (this.movingBox.width() - 4)) {               
+            
+                // Change state to "not-moving-anything" by clearing out
+                // this.movingBox.
+                this.movingBox = null;
+            }
         } else if (this.resizingBox) {
             // Change state to "not-moving-anything" by clearing out
             // this.movingBox.
@@ -199,7 +191,7 @@ var Boxes = {
                 startOffset = jThis.offset(),
                 widthh = jThis.width(),
                 heightt = jThis.height();
-                console.log ("heightt="+heightt+ ", widthh="+widthh );
+                
 
                 // Grab the drawing area (this element's parent).
                 // We want the actual element, and not the jQuery wrapper
@@ -211,14 +203,13 @@ var Boxes = {
 		// added for review of corners
 		// added for review of corners
 		/////////////
-                console.log ("event.pageX="+event.pageX);
-                console.log ("event.pageY="+event.pageY);
+                
                 parent.LTcorner= ( Math.abs( startOffset.left - event.pageX)<10 && 
                                   Math.abs(startOffset.top   - event.pageY)< 10 )?true:false;
-                console.log("LTcorner is"+ parent.LTcorner);
+                
                 parent.LBcorner= ( Math.abs(startOffset.left -event.pageX)<10 && 
                                    Math.abs(startOffset.top +heightt - event.pageY) <10)?true:false;
-                console.log("LBcorner is"+ parent.LBcorner);
+               
                 parent.RTcorner= ( Math.abs(startOffset.left+ widthh - event.pageX) <10  && 
                                    Math.abs(startOffset.top - event.pageY)<10 )?true:false;
                 parent.RBcorner= ( Math.abs(startOffset.left + widthh - event.pageX) <10 && 
@@ -227,7 +218,7 @@ var Boxes = {
                 parent.width=widthh
 
 		if ( parent.LTcorner || parent.LBcorner || parent.RTcorner || parent.RBcorner ) {
-                        console.log ("at a corner");
+                        
                         parent.originX = startOffset.left
                         parent.originY = startOffset.top
 
