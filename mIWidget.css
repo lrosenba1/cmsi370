@@ -1,0 +1,21 @@
+#middle {
+   position: absolute;
+   top: 45px;
+   left: 112px;
+   width: 10px;
+}
+
+#alphaWheel {
+    margin-top: 60px;
+    margin-left: 50px;
+    width: 129px;
+    height: 136px;
+}
+
+#knob {
+    position: absolute;
+    top: 68px;
+    left: 64px;
+    width: 115px;
+    height: 127px;
+}
