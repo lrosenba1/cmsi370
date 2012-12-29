@@ -14,6 +14,8 @@ body {
    padding-top: 20px;
 }
 
+/* JD: See my inline comments for tips on how to use more advanced selectors
+       so that your markup is decreased. */
 #backgroundTable {
    display: table;
    width: 312px;

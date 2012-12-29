@@ -17,6 +17,9 @@ body {
    margin-left: 250px;
 }
 
+/* JD: Your CSS strategy consists solely of IDs---which results in a degree of redundancy
+       and repetitive properties.  This can be tightened up with better analysis of how
+       your user interface is structured, and what patterns exist or repeat. */
 #exit {
    margin-bottom: 35px;
    margin-top: 10px;

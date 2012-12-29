@@ -11,6 +11,12 @@
   
   <body>
     <div id = "topScreen">
+      <!-- JD: Your use of classes is technically correct, but not optimal.
+               Note, for example, that backgroundTableCell *always* pertains
+               to a div within backgroundTableRow.  For fixed relationships such
+               as this, you can use less markup by learning how to use more advanced
+               selectors such as > or +, as well as pseudoclasses like first-child
+               and last-child. -->
       <div id = "backgroundTable">
          <div class = "backgroundTableRow">
              <div class = "backgroundTableCell"></div>
@@ -238,7 +244,8 @@
             <li class="sec"></li>
          </ul>
 	  </div>
-	  <h2></h2>
+	  <h2></h2> <!-- JD: Try to avoid "spacer" markup when possible.
+                         This one can be avoided using margin or padding. -->
 	  <div id = "calendar">
 		 <div id = "daysOfWeek" class = "row">
 			<div id = "sun" class = "weekDay">Su</div>
@@ -249,6 +256,10 @@
 			<div class = "weekDay">Fr</div>
 			<div id = "sat" class = "weekDay">Sa</div>
 		 </div>
+         <!-- JD: Here is another example of more-markup-than-necessary.
+                  The day class pertains to all immediate children of a
+                  row class.  Further, firstDay and lastDay can be obviated
+                  by using :first-child and :last-child pseudoclasses. -->
 		 <div class = "row">
 			 <div class = "day firstDay"></div>
 			 <div class = "day"></div>
@@ -298,6 +309,7 @@
 	</div>
 	<div id = "bottomScreen">
 	  <div id="bottomTable">
+         <!-- JD: At this point, you know what I am going to say, right?  :) -->
          <div id="firstRow" class="backgroundTableRow">
              <div class="backgroundTableCell firstCell"></div>
              <div class="backgroundTableCell bottomCell"></div>
@@ -339,6 +351,11 @@
              <div class="backgroundTableCell lastCell"></div>
          </div>
       </div>
+      <!-- JD: I can understand the absolute positioning for the other elements
+               on this page, but this block, not so much.  Seems that you can
+               structure these, up to #gameboyAdvance, within a container div
+               with the elements arranged into adjacent rows, allowing you to
+               eliminate a few absolute position CSS properties. -->
 	  <div id="game">
 	    <img src="pokeball.gif" height="40" width="40">
 	    <div>Pokémon Platinum <br> Nintendo</div>

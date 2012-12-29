@@ -40,6 +40,9 @@
                 </select>
                 <p class = "description">For selected text</p>
            </div>
+           <!-- JD: Remember that radio buttons are supposed to be mutually exclusive
+                    (i.e., only one of them may be selected).  This is *very* easy to
+                    do in HTML: you should have looked this up or asked. -->
            <div id = "radioButtons">
                 Place scroll arrows: <input type = "radio" id = "scroll" name = "scroll" value = "Together"><label for = "scroll"> Together</label>
                 <input type = "radio" id = "topBottom" name = "topBottom" value = "At top and bottom"><label for = "topBottom" id = "tLabel"> At top and bottom</label>
@@ -93,6 +96,8 @@
                     <option value="12">12</option>
                  </select> 
                  and smaller
+                 <!-- JD: Functionally, this is still a button.  It would have been good to still
+                          mark it up as such, the way you did the window controls and the toolbar. -->
                  <img src = "help.png" id = "help">
            </div>
         </div>
