@@ -146,6 +146,9 @@ var Boxes = {
             this.drawingBox = null;
         } else if (this.movingBox) {
             console.log(this.movingBox.width());
+            // JD: This appears to be the beginning of a "delete box" implementation,
+            //     but currently unfinished.  Right off the bat, note the hardcoded
+            //     "514," which is most definitely avoidable.
             if ((event.pageX - this.deltaX) <= 514 - (this.movingBox.width() - 4)) {               
             
                 // Change state to "not-moving-anything" by clearing out
@@ -192,6 +195,8 @@ var Boxes = {
                 widthh = jThis.width(),
                 heightt = jThis.height();
                 
+            // JD: Note that statements after the var declarations are at the same
+            //     level as those declarations, so should line up with the var keyword.
 
                 // Grab the drawing area (this element's parent).
                 // We want the actual element, and not the jQuery wrapper
@@ -203,7 +208,8 @@ var Boxes = {
 		// added for review of corners
 		// added for review of corners
 		/////////////
-                
+                // JD: The true : false assignment at the end is superfluous---the condition
+                //     expression itself is already a boolean!
                 parent.LTcorner= ( Math.abs( startOffset.left - event.pageX)<10 && 
                                   Math.abs(startOffset.top   - event.pageY)< 10 )?true:false;
                 
@@ -214,6 +220,7 @@ var Boxes = {
                                    Math.abs(startOffset.top - event.pageY)<10 )?true:false;
                 parent.RBcorner= ( Math.abs(startOffset.left + widthh - event.pageX) <10 && 
                                    Math.abs(startOffset.top+ heightt -event.pageY) <10 )?true:false;
+                // JD: Semicolons needed in the lines below.
                 parent.height=heightt
                 parent.width=widthh
 
