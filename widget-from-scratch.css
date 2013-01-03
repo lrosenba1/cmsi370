@@ -1,3 +1,6 @@
+/* JD: Your use of IDs in your widget CSS locks you into a single possible
+       instance of this widget on a web page.  This keeps your widget code
+       from being freely reusable nor "componentized." */
 #middle {
    position: absolute;
    top: 45px;
